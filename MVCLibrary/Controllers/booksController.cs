@@ -54,7 +54,7 @@ namespace MVCLibrary.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,ISBN")] book book)
+        public async Task<IActionResult> Create([Bind("Id,Title,ISBN,Author")] book book)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace MVCLibrary.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ISBN")] book book)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ISBN,Author")] book book)
         {
             if (id != book.Id)
             {
